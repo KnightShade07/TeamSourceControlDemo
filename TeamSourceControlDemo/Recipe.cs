@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TeamSourceControlDemo
 {
-    class Recipe
+    public class Recipe
     {
         /// <summary>
         /// The Id of the recipe in the database
