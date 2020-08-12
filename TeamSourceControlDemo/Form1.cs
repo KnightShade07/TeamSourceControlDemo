@@ -16,5 +16,47 @@ namespace TeamSourceControlDemo
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddRecipeBtn_Click(object sender, EventArgs e)
+        {
+            Recipe r = new Recipe()
+            {
+                Title = RecipeTitleTxt.Text,
+                TotalTime = Convert.ToInt32(TotalTimeTxt.Text),
+                PrepTime = Convert.ToInt32(PrepTimeTxt.Text),
+                Servings = Convert.ToInt32(ServingsTxt.Text),
+                Ingredients = IngredientsTxt.Text,
+                Instructions = InstructionsTxt.Text
+            };
+
+            RecipeContext dbContext = new RecipeContext();
+            dbContext.Recipes.Add(r);
+            dbContext.SaveChanges();
+            ClearTextBoxes();
+            MessageBox.Show(RecipeTitleTxt.Text + " has been added!");
+        }
+        /// <summary>
+        /// Clears text all text boxes after submitting to the DB
+        /// </summary>
+        private void ClearTextBoxes()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
+        }
     }
 }
