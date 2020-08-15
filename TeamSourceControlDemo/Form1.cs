@@ -21,7 +21,11 @@ namespace TeamSourceControlDemo
         {
 
         }
-
+        /// <summary>
+        /// This method will add a recipe
+        /// to the database when the "Add Recipe"
+        /// button is clicked.
+        /// </summary>
         private void AddRecipeBtn_Click(object sender, EventArgs e)
         {
             Recipe r = new Recipe()
