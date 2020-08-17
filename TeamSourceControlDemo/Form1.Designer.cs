@@ -42,8 +42,6 @@
             this.ServingsTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.IngredientsTxt = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // TotalTimeTxt
@@ -98,11 +96,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(102, 24);
+            this.label4.Location = new System.Drawing.Point(47, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 13);
+            this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Simple Recipe Database";
+            this.label4.Text = "Add Recipe";
             // 
             // AddRecipeBtn
             // 
@@ -163,30 +161,11 @@
             this.IngredientsTxt.Size = new System.Drawing.Size(100, 154);
             this.IngredientsTxt.TabIndex = 12;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 52);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Recipe Catalog";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(112, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 405);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.IngredientsTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ServingsTxt);
@@ -202,7 +181,7 @@
             this.Controls.Add(this.PrepTimeTxt);
             this.Controls.Add(this.TotalTimeTxt);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Add Recipe";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -225,8 +204,6 @@
         private System.Windows.Forms.TextBox ServingsTxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox IngredientsTxt;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
