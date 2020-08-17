@@ -48,7 +48,10 @@ namespace TeamSourceControlDemo
             }
             
         }
-
+        /// <summary>
+        /// This method will delete a recipe from the database.
+        /// </summary>
+        /// <param name="r">The object containing the recipe data.</param>
         public static void Delete(Recipe r)
         {
             using (RecipeContext context = new RecipeContext())
