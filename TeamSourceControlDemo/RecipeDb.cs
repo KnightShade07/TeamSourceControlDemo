@@ -11,7 +11,7 @@ namespace TeamSourceControlDemo
     {
         public static List<Recipe> GetAllRecipes()
         {
-
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Adds recipe to the database. Returns the recipe with the <see cref="Recipe.RecipeId"/> property populated
