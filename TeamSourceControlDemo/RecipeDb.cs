@@ -28,10 +28,25 @@ namespace TeamSourceControlDemo
 
             }
         }
-        
+        /// <summary>
+        /// Updates a recipe in the database.
+        /// </summary>
+        /// <param name="r">The object that contains the recipe data</param>
+        /// <returns></returns>
         public static Recipe Update(Recipe r)
         {
-            throw new NotImplementedException();
+            using (RecipeContext updateContext = new RecipeContext())
+            {
+                //Write output to console.
+                updateContext.Database.Log = Console.WriteLine;
+                //Tells the EF that the object's data has been updated/modified in
+                //some way
+                updateContext.Entry(r).State = EntityState.Modified;
+                //Executes Update Query
+                updateContext.SaveChanges();
+                return r;
+            }
+            
         }
 
         public static void Delete(Recipe r)
