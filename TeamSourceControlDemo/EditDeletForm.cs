@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TeamSourceControlDemo
 {
-    public partial class EditDeleteForm : Form
+    public partial class EditDeletForm : Form
     {
-        public EditDeleteForm()
+        public EditDeletForm()
         {
             InitializeComponent();
         }
