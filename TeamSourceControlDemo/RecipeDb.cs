@@ -12,7 +12,26 @@ namespace TeamSourceControlDemo
     {
         public static List<Recipe> GetAllRecipes()
         {
-            throw new NotImplementedException();
+            using (RecipeContext context = new RecipeContext())
+            {
+                // Returns all recipes from Db in a list
+                List<Recipe> allRecipes = context.Recipes.ToList();
+                
+                return allRecipes;
+            }
+        }
+
+        public static Recipe GetRecipe(int id)
+        {
+            using (RecipeContext context = new RecipeContext())
+            {
+                Recipe getRec =
+                    (from r in context.Recipes
+                     where r.RecipeId == id
+                     select r).Single();
+
+                return getRec;
+            }
         }
         /// <summary>
         /// Adds recipe to the database. Returns the recipe with the <see cref="Recipe.RecipeId"/> property populated

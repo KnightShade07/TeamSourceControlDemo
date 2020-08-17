@@ -58,11 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditDeletForm.cs">
+    <Compile Include="EditDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditDeletForm.Designer.cs">
-      <DependentUpon>EditDeletForm.cs</DependentUpon>
+    <Compile Include="EditDeleteForm.Designer.cs">
+      <DependentUpon>EditDeleteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -92,8 +92,8 @@
     <Compile Include="ShowRecipeForm.Designer.cs">
       <DependentUpon>ShowRecipeForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EditDeletForm.resx">
-      <DependentUpon>EditDeletForm.cs</DependentUpon>
+    <EmbeddedResource Include="EditDeleteForm.resx">
+      <DependentUpon>EditDeleteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
