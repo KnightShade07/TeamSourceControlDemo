@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TeamSourceControlDemo
@@ -19,10 +13,16 @@ namespace TeamSourceControlDemo
 
         private void RecipeMain_Load(object sender, EventArgs e)
         {
+            List<Recipe> allRecipes = RecipeDb.GetAllRecipes();
+            PopulateRecipeList(allRecipes);
         }
-        private void RecipeCatalogCbx(object sender, EventArgs e)
+        private void PopulateRecipeList(List<Recipe> recipes)
         {
-
+            RecipeCbx.Items.Clear();
+            foreach (Recipe r in recipes)
+            {
+                RecipeCbx.Items.Add(r.Title);
+            }
         }
 
         private void AddRecipeBtn_Click(object sender, EventArgs e)

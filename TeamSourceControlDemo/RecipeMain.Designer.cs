@@ -43,7 +43,6 @@
             this.RecipeCbx.Name = "RecipeCbx";
             this.RecipeCbx.Size = new System.Drawing.Size(170, 21);
             this.RecipeCbx.TabIndex = 0;
-            this.RecipeCbx.SelectedIndexChanged += new System.EventHandler(this.RecipeCatalogCbx);
             // 
             // label1
             // 
