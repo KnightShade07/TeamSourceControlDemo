@@ -44,6 +44,7 @@
             this.IngredientsTxt = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.UpdateRecipebtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TotalTimeTxt
@@ -180,11 +181,22 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
             // 
+            // UpdateRecipebtn
+            // 
+            this.UpdateRecipebtn.Location = new System.Drawing.Point(89, 352);
+            this.UpdateRecipebtn.Name = "UpdateRecipebtn";
+            this.UpdateRecipebtn.Size = new System.Drawing.Size(123, 41);
+            this.UpdateRecipebtn.TabIndex = 16;
+            this.UpdateRecipebtn.Text = "Update Recipe!";
+            this.UpdateRecipebtn.UseVisualStyleBackColor = true;
+            this.UpdateRecipebtn.Click += new System.EventHandler(this.UpdateRecipebtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 405);
+            this.Controls.Add(this.UpdateRecipebtn);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.IngredientsTxt);
@@ -227,6 +239,7 @@
         private System.Windows.Forms.TextBox IngredientsTxt;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button UpdateRecipebtn;
     }
 }
 

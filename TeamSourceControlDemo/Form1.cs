@@ -62,5 +62,20 @@ namespace TeamSourceControlDemo
 
             func(Controls);
         }
+
+        private void UpdateRecipebtn_Click(object sender, EventArgs e)
+        {
+            updateRecipe();
+        }
+
+        public void updateRecipe()
+        {
+            //Load all recipies.
+            List<Recipe> allRecipes = 
+            //Clear old data.
+
+            //and then replace old data with
+            //new data.
+        }
     }
 }
