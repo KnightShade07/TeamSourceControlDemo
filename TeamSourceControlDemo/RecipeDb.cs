@@ -28,7 +28,11 @@ namespace TeamSourceControlDemo
 
             }
         }
-        
+        /// <summary>
+        /// Updates a recipe in the database.
+        /// </summary>
+        /// <param name="r">The object that contains the recipe data</param>
+        /// <returns></returns>
         public static Recipe Update(Recipe r)
         {
             throw new NotImplementedException();
