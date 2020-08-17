@@ -1,6 +1,6 @@
 ﻿namespace TeamSourceControlDemo
 {
-    partial class EditDeleteForm
+    partial class EditDeletForm
     {
         /// <summary>
         /// Required designer variable.
