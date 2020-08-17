@@ -16,5 +16,11 @@ namespace TeamSourceControlDemo
         {
             InitializeComponent();
         }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            //This is where we'll call our Update Method in RecipeDB
+            
+        }
     }
 }
