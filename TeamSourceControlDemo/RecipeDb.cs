@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -19,11 +20,13 @@ namespace TeamSourceControlDemo
         /// <param name="r">The recipe to be added</param>
         public static Recipe Add(Recipe r)
         {
-            RecipeContext context = new RecipeContext();
-            context.Recipes.Add(r);
-            context.SaveChanges();
+            using (RecipeContext context = new RecipeContext())
+            {
+                context.Recipes.Add(r);
+                context.SaveChanges();
+                return r;
 
-            return r;
+            }
         }
 
         public static Recipe Update(Recipe r)
@@ -31,9 +34,19 @@ namespace TeamSourceControlDemo
             throw new NotImplementedException();
         }
 
-        public static void Delete(int id)
+        public static void Delete(Recipe r)
         {
-            throw new NotImplementedException();
+            using (RecipeContext context = new RecipeContext())
+            {
+                // Write EF output to the console
+                context.Database.Log = Console.WriteLine;
+
+                // Telling EF that the product is already in the DB and it should be deleted
+                context.Entry(r).State = EntityState.Deleted;
+
+                // Executes Delete query
+                context.SaveChanges();
+            }
         }
     }
 }
