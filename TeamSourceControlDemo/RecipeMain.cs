@@ -19,7 +19,6 @@ namespace TeamSourceControlDemo
 
         private void RecipeMain_Load(object sender, EventArgs e)
         {
-            List<Recipe> allRecipes = 
         }
         private void RecipeCatalogCbx(object sender, EventArgs e)
         {

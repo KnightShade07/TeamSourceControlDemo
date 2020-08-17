@@ -38,11 +38,9 @@ namespace TeamSourceControlDemo
                 Instructions = InstructionsTxt.Text
             };
 
-            RecipeContext dbContext = new RecipeContext();
-            dbContext.Recipes.Add(r);
-            dbContext.SaveChanges();
+            RecipeDb.Add(r);
             ClearTextBoxes();
-            MessageBox.Show(RecipeTitleTxt.Text + " has been added!");
+            MessageBox.Show(r.Title + " has been added!");
         }
         /// <summary>
         /// Clears text all text boxes after submitting to the DB
