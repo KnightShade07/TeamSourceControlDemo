@@ -38,9 +38,14 @@ namespace TeamSourceControlDemo
 
         private void EditDeleteRecipeBtn_Click(object sender, EventArgs e)
         {
-            EditDeletForm newform = new EditDeletForm();
-            newform.Show();
+            Recipe currRecipe = RecipeCbx.SelectedItem as Recipe;
+            int id = currRecipe.RecipeId;
+            EditDeleteForm newForm = new EditDeleteForm();
+            newForm.Show();
         }
 
+        private void showRecipeBtn_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
