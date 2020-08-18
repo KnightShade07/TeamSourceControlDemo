@@ -34,6 +34,7 @@
             this.EditDeleteRecipeBtn = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.showRecipeBtn = new System.Windows.Forms.Button();
+            this.mainPagelbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RecipeCbx
@@ -42,8 +43,8 @@
             this.RecipeCbx.Location = new System.Drawing.Point(12, 44);
             this.RecipeCbx.Name = "RecipeCbx";
             this.RecipeCbx.Size = new System.Drawing.Size(170, 21);
-            this.RecipeCbx.Sorted = true;
             this.RecipeCbx.TabIndex = 0;
+            this.RecipeCbx.SelectedIndexChanged += new System.EventHandler(this.RecipeCatalogCbx);
             // 
             // label1
             // 
@@ -92,13 +93,22 @@
             this.showRecipeBtn.TabIndex = 5;
             this.showRecipeBtn.Text = "Show Recipe";
             this.showRecipeBtn.UseVisualStyleBackColor = true;
-            this.showRecipeBtn.Click += new System.EventHandler(this.showRecipeBtn_Click);
+            // 
+            // mainPagelbl
+            // 
+            this.mainPagelbl.AutoSize = true;
+            this.mainPagelbl.Location = new System.Drawing.Point(155, 13);
+            this.mainPagelbl.Name = "mainPagelbl";
+            this.mainPagelbl.Size = new System.Drawing.Size(58, 13);
+            this.mainPagelbl.TabIndex = 6;
+            this.mainPagelbl.Text = "Main Page";
             // 
             // RecipeMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 168);
+            this.Controls.Add(this.mainPagelbl);
             this.Controls.Add(this.showRecipeBtn);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.EditDeleteRecipeBtn);
@@ -106,7 +116,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RecipeCbx);
             this.Name = "RecipeMain";
-            this.Text = "Food Recipes";
+            this.Text = "Recipe Catalog";
             this.Load += new System.EventHandler(this.RecipeMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,5 +131,6 @@
         private System.Windows.Forms.Button EditDeleteRecipeBtn;
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button showRecipeBtn;
+        private System.Windows.Forms.Label mainPagelbl;
     }
 }

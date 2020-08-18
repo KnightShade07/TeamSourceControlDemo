@@ -12,26 +12,7 @@ namespace TeamSourceControlDemo
     {
         public static List<Recipe> GetAllRecipes()
         {
-            using (RecipeContext context = new RecipeContext())
-            {
-                // Returns all recipes from Db in a list
-                List<Recipe> allRecipes = context.Recipes.ToList();
-                
-                return allRecipes;
-            }
-        }
-
-        public static Recipe GetRecipe(int id)
-        {
-            using (RecipeContext context = new RecipeContext())
-            {
-                Recipe getRec =
-                    (from r in context.Recipes
-                     where r.RecipeId == id
-                     select r).Single();
-
-                return getRec;
-            }
+            throw new NotImplementedException();
         }
         /// <summary>
         /// Adds recipe to the database. Returns the recipe with the <see cref="Recipe.RecipeId"/> property populated
@@ -47,12 +28,30 @@ namespace TeamSourceControlDemo
 
             }
         }
-
+        /// <summary>
+        /// Updates a recipe in the database.
+        /// </summary>
+        /// <param name="r">The object that contains the recipe data</param>
+        /// <returns></returns>
         public static Recipe Update(Recipe r)
         {
-            throw new NotImplementedException();
+            using (RecipeContext updateContext = new RecipeContext())
+            {
+                //Write output to console.
+                updateContext.Database.Log = Console.WriteLine;
+                //Tells the EF that the object's data has been updated/modified in
+                //some way
+                updateContext.Entry(r).State = EntityState.Modified;
+                //Executes Update Query
+                updateContext.SaveChanges();
+                return r;
+            }
+            
         }
-
+        /// <summary>
+        /// This method will delete a recipe from the database.
+        /// </summary>
+        /// <param name="r">The object containing the recipe data.</param>
         public static void Delete(Recipe r)
         {
             using (RecipeContext context = new RecipeContext())
