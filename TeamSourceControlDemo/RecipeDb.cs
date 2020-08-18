@@ -10,17 +10,25 @@ namespace TeamSourceControlDemo
 {
     static class RecipeDb
     {
+        /// <summary>
+        /// Gets all recipies from the database.
+        /// </summary>
+        /// <returns>The object containing all the recipies.</returns>
         public static List<Recipe> GetAllRecipes()
         {
             using (RecipeContext context = new RecipeContext())
             {
-                // Returns all recipes from Db in a list
+                // Returns all recipes from Db in a list.
                 List<Recipe> allRecipes = context.Recipes.ToList();
 
                 return allRecipes;
             }
         }
-
+        /// <summary>
+        /// Gets a specific recipe from the database.
+        /// </summary>
+        /// <param name="id">The ID number a recipe is assigned</param>
+        /// <returns> getRec - The object holding the recipe data</returns>
         public static Recipe GetRecipe(int id)
         {
             using (RecipeContext context = new RecipeContext())
@@ -34,9 +42,9 @@ namespace TeamSourceControlDemo
             }
         }
         /// <summary>
-        /// Adds recipe to the database. Returns the recipe with the <see cref="Recipe.RecipeId"/> property populated
+        /// Adds recipe to the database. Returns the recipe with the <see cref="Recipe.RecipeId"/> property populated.
         /// </summary>
-        /// <param name="r">The recipe to be added</param>
+        /// <param name="r">The recipe to be added.</param>
         public static Recipe Add(Recipe r)
         {
             using (RecipeContext context = new RecipeContext())
@@ -50,8 +58,8 @@ namespace TeamSourceControlDemo
         /// <summary>
         /// Updates a recipe in the database.
         /// </summary>
-        /// <param name="r">The object that contains the recipe data</param>
-        /// <returns></returns>
+        /// <param name="r">The object that contains the recipe data.</param>
+        /// <returns>r</returns>
         public static Recipe Update(Recipe r)
         {
             using (RecipeContext updateContext = new RecipeContext())
@@ -70,7 +78,7 @@ namespace TeamSourceControlDemo
         /// <summary>
         /// This method will delete a recipe from the database.
         /// </summary>
-        /// <param name="r">The object containing the recipe data.</param>
+        /// <param name="r"> r - The object containing the recipe data.</param>
         public static void Delete(Recipe r)
         {
             using (RecipeContext context = new RecipeContext())
