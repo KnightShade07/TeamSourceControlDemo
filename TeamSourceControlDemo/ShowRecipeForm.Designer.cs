@@ -124,10 +124,10 @@
             // InstructionsTxt
             // 
             this.InstructionsTxt.Enabled = false;
-            this.InstructionsTxt.Location = new System.Drawing.Point(12, 187);
+            this.InstructionsTxt.Location = new System.Drawing.Point(17, 187);
             this.InstructionsTxt.Multiline = true;
             this.InstructionsTxt.Name = "InstructionsTxt";
-            this.InstructionsTxt.Size = new System.Drawing.Size(424, 101);
+            this.InstructionsTxt.Size = new System.Drawing.Size(407, 101);
             this.InstructionsTxt.TabIndex = 26;
             // 
             // PrepTimeTxt

@@ -44,7 +44,6 @@
             this.RecipeCbx.Name = "RecipeCbx";
             this.RecipeCbx.Size = new System.Drawing.Size(170, 21);
             this.RecipeCbx.TabIndex = 0;
-            this.RecipeCbx.SelectedIndexChanged += new System.EventHandler(this.RecipeCatalogCbx);
             // 
             // label1
             // 
@@ -93,6 +92,7 @@
             this.showRecipeBtn.TabIndex = 5;
             this.showRecipeBtn.Text = "Show Recipe";
             this.showRecipeBtn.UseVisualStyleBackColor = true;
+            this.showRecipeBtn.Click += new System.EventHandler(this.showRecipeBtn_Click_1);
             // 
             // mainPagelbl
             // 
