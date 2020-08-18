@@ -179,6 +179,7 @@
             this.ExitBtn.TabIndex = 31;
             this.ExitBtn.Text = "Exit";
             this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // EditDeleteForm
             // 
