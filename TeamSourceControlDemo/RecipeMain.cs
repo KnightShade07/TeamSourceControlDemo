@@ -58,5 +58,11 @@ namespace TeamSourceControlDemo
             currRecipeId = currRecipe.RecipeId;
         }
 
+        private void showAllRecipiesButton_Click(object sender, EventArgs e)
+        {
+            AllRecipesForm allRecipes = new AllRecipesForm();
+            allRecipes.Show();
+            
+        }
     }
 }

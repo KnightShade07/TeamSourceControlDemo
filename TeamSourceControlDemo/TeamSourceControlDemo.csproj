@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllRecipesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllRecipesForm.Designer.cs">
+      <DependentUpon>AllRecipesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditDeleteForm.cs">
       <SubType>Form</SubType>
     </Compile>
