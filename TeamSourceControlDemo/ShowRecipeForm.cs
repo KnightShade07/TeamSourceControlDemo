@@ -16,5 +16,10 @@ namespace TeamSourceControlDemo
         {
             InitializeComponent();
         }
+
+        private void ShowRecipeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
