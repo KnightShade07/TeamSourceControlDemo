@@ -92,6 +92,7 @@
             this.showRecipeBtn.TabIndex = 5;
             this.showRecipeBtn.Text = "Show Recipe";
             this.showRecipeBtn.UseVisualStyleBackColor = true;
+            this.showRecipeBtn.Click += new System.EventHandler(this.showRecipeBtn_Click_1);
             // 
             // mainPagelbl
             // 

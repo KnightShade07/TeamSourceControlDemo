@@ -41,20 +41,22 @@ namespace TeamSourceControlDemo
         private void EditDeleteRecipeBtn_Click(object sender, EventArgs e)
         {
             // gets item selected in the combo box
+            GetRecipeId();
+            EditDeleteForm form = new EditDeleteForm();
+            form.Show();
+        }
+        private void showRecipeBtn_Click_1(object sender, EventArgs e)
+        {
+            GetRecipeId();
+            ShowRecipeForm newForm = new ShowRecipeForm();
+            newForm.Show();
+        }
+        // gets the id from the selected item in the combo box 
+        private void GetRecipeId()
+        {
             Recipe currRecipe = RecipeCbx.SelectedItem as Recipe;
-            // stores id of the current recipe into the global variable to be passed to the new form
             currRecipeId = currRecipe.RecipeId;
-            if (RecipeDb.GetRecipe(currRecipe.RecipeId) != null)
-            {
-                using (EditDeleteForm form = new EditDeleteForm())
-                {
-                    form.ShowDialog();
-                }
-            }
         }
 
-        private void showRecipeBtn_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
