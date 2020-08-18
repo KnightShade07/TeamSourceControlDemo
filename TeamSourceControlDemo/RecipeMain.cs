@@ -6,6 +6,7 @@ namespace TeamSourceControlDemo
 {
     public partial class RecipeMain : Form
     {
+        public static int currRecipeId;
         public RecipeMain()
         {
             InitializeComponent();
@@ -18,11 +19,8 @@ namespace TeamSourceControlDemo
         }
         private void PopulateRecipeList(List<Recipe> recipes)
         {
-            RecipeCbx.Items.Clear();
-            foreach (Recipe r in recipes)
-            {
-                RecipeCbx.Items.Add(r.Title);
-            }
+            RecipeCbx.DataSource = recipes;
+            RecipeCbx.DisplayMember = nameof(Recipe.Title);
         }
 
         private void AddRecipeBtn_Click(object sender, EventArgs e)
@@ -38,10 +36,16 @@ namespace TeamSourceControlDemo
 
         private void EditDeleteRecipeBtn_Click(object sender, EventArgs e)
         {
+            // gets item selected in the combo box
             Recipe currRecipe = RecipeCbx.SelectedItem as Recipe;
-            int id = currRecipe.RecipeId;
-            EditDeleteForm newForm = new EditDeleteForm();
-            newForm.Show();
+            // stores id of the current recipe into the global variable to be passed to the new form
+            if (RecipeDb.GetRecipe(currRecipe.RecipeId) != null)
+            {
+                using (EditDeleteForm form = new EditDeleteForm())
+                {
+                    form.ShowDialog();
+                }
+            }
         }
 
         private void showRecipeBtn_Click(object sender, EventArgs e)
