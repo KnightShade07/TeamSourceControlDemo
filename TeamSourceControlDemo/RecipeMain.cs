@@ -43,6 +43,7 @@ namespace TeamSourceControlDemo
             // gets item selected in the combo box
             Recipe currRecipe = RecipeCbx.SelectedItem as Recipe;
             // stores id of the current recipe into the global variable to be passed to the new form
+            currRecipeId = currRecipe.RecipeId;
             if (RecipeDb.GetRecipe(currRecipe.RecipeId) != null)
             {
                 using (EditDeleteForm form = new EditDeleteForm())

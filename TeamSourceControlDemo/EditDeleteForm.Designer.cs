@@ -103,7 +103,6 @@
             this.EditBtn.TabIndex = 29;
             this.EditBtn.Text = "Save Changes";
             this.EditBtn.UseVisualStyleBackColor = true;
-            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // label4
             // 

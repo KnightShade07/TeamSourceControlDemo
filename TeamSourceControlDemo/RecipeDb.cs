@@ -12,7 +12,13 @@ namespace TeamSourceControlDemo
     {
         public static List<Recipe> GetAllRecipes()
         {
-            throw new NotImplementedException();
+            using (RecipeContext context = new RecipeContext())
+            {
+                // Returns all recipes from Db in a list
+                List<Recipe> allRecipes = context.Recipes.ToList();
+
+                return allRecipes;
+            }
         }
 
         public static Recipe GetRecipe(int id)
