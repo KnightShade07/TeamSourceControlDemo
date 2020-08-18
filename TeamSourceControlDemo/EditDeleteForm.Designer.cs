@@ -180,7 +180,7 @@
             this.ExitBtn.Text = "Exit";
             this.ExitBtn.UseVisualStyleBackColor = true;
             // 
-            // EditDeletForm
+            // EditDeleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,8 +201,9 @@
             this.Controls.Add(this.InstructionsTxt);
             this.Controls.Add(this.PrepTimeTxt);
             this.Controls.Add(this.TotalTimeTxt);
-            this.Name = "EditDeletForm";
+            this.Name = "EditDeleteForm";
             this.Text = "EditDeletForm";
+            this.Load += new System.EventHandler(this.EditDeleteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
