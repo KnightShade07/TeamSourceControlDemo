@@ -41,5 +41,11 @@ namespace TeamSourceControlDemo
             IngredientsTxt.Text = r.Ingredients.ToString();
             InstructionsTxt.Text = r.Instructions.ToString();
         }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            //closes the form.
+            this.Close();
+        }
     }
 }
