@@ -68,5 +68,14 @@ namespace TeamSourceControlDemo
 
             
         }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            CurrRecipeId = RecipeMain.currRecipeId;
+            Recipe currRecipe = RecipeDb.GetRecipe(CurrRecipeId);
+            RecipeDb.Update(currRecipe);
+            MessageBox.Show(currRecipe.Title + " was updated!");
+            PopulateCurrentRecipe(currRecipe);
+        }
     }
 }
