@@ -38,7 +38,7 @@ namespace TeamSourceControlDemo
 
         private void EditDeleteRecipeBtn_Click(object sender, EventArgs e)
         {
-            EditDeletForm newform = new EditDeletForm();
+            EditDeleteForm newform = new EditDeleteForm();
             newform.Show();
         }
 
