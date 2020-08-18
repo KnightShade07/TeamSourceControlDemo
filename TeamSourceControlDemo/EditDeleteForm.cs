@@ -47,5 +47,11 @@ namespace TeamSourceControlDemo
             //closes the form.
             this.Close();
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            //Tried calling delete function, perhaps I am doing it wrong?
+            //RecipeDb.Delete(r);
+        }
     }
 }
