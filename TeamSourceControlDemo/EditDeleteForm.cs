@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -46,6 +47,26 @@ namespace TeamSourceControlDemo
         {
             //closes the form.
             this.Close();
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            CurrRecipeId = RecipeMain.currRecipeId;
+            Recipe currRecipe = RecipeDb.GetRecipe(CurrRecipeId);
+
+            const string message = "Do you want to delete this recipe?";
+            var caption = "Delete?";
+            var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                RecipeDb.Delete(currRecipe);
+                Close();
+                RecipeMain main = new RecipeMain();
+                main.Show();
+            }
+
+            
         }
     }
 }

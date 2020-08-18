@@ -170,6 +170,7 @@
             this.DeleteBtn.TabIndex = 30;
             this.DeleteBtn.Text = "Delete Recipe";
             this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // ExitBtn
             // 
