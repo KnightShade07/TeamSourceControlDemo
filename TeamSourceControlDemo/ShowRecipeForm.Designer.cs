@@ -40,6 +40,7 @@
             this.InstructionsTxt = new System.Windows.Forms.TextBox();
             this.PrepTimeTxt = new System.Windows.Forms.TextBox();
             this.TotalTimeTxt = new System.Windows.Forms.TextBox();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IngredientsTxt
@@ -146,11 +147,22 @@
             this.TotalTimeTxt.Size = new System.Drawing.Size(100, 20);
             this.TotalTimeTxt.TabIndex = 18;
             // 
+            // closeBtn
+            // 
+            this.closeBtn.Location = new System.Drawing.Point(281, 304);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(143, 37);
+            this.closeBtn.TabIndex = 27;
+            this.closeBtn.Text = "Exit";
+            this.closeBtn.UseVisualStyleBackColor = true;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
             // ShowRecipeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 329);
+            this.ClientSize = new System.Drawing.Size(448, 353);
+            this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.IngredientsTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ServingsTxt);
@@ -185,5 +197,6 @@
         private System.Windows.Forms.TextBox InstructionsTxt;
         private System.Windows.Forms.TextBox PrepTimeTxt;
         private System.Windows.Forms.TextBox TotalTimeTxt;
+        private System.Windows.Forms.Button closeBtn;
     }
 }

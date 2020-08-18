@@ -33,5 +33,10 @@ namespace TeamSourceControlDemo
             IngredientsTxt.Text = r.Ingredients.ToString();
             InstructionsTxt.Text = r.Instructions.ToString();
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
