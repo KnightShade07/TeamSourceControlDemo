@@ -13,7 +13,7 @@ namespace TeamSourceControlDemo
     public partial class EditDeleteForm : Form
     {
         public int CurrRecipeId { get; set; }
-        
+
         public EditDeleteForm()
         {
             InitializeComponent();
@@ -40,11 +40,6 @@ namespace TeamSourceControlDemo
             ServingsTxt.Text = r.Servings.ToString();
             IngredientsTxt.Text = r.Ingredients.ToString();
             InstructionsTxt.Text = r.Instructions.ToString();
-            
-        private void EditBtn_Click(object sender, EventArgs e)
-        {
-            //This is where we'll call our Update Method in RecipeDB
-            
         }
     }
 }

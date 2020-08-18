@@ -14,6 +14,19 @@ namespace TeamSourceControlDemo
         {
             throw new NotImplementedException();
         }
+
+        public static Recipe GetRecipe(int id)
+        {
+            using (RecipeContext context = new RecipeContext())
+            {
+                Recipe getRec =
+                    (from r in context.Recipes
+                     where r.RecipeId == id
+                     select r).Single();
+
+                return getRec;
+            }
+        }
         /// <summary>
         /// Adds recipe to the database. Returns the recipe with the <see cref="Recipe.RecipeId"/> property populated
         /// </summary>
