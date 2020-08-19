@@ -85,7 +85,6 @@ namespace TeamSourceControlDemo
             tempRecipe.Ingredients = IngredientsTxt.Text;
             tempRecipe.Instructions = InstructionsTxt.Text;
             RecipeDb.Update(tempRecipe);
-            RecipeMain.RefreshRecipeList();
             MessageBox.Show(tempRecipe.Title + " was updated!");
             
         }
