@@ -26,6 +26,16 @@ namespace TeamSourceControlDemo
             RecipeCbx.DataSource = recipes;
             RecipeCbx.DisplayMember = nameof(Recipe.Title);
         }
+        /// <summary>
+        /// Refreshes the combo box after updating without closing
+        /// the application.
+        /// </summary>
+        public static void RefreshRecipeList()
+        {
+            
+            List<Recipe> allRecipes = RecipeDb.GetAllRecipes();
+            RecipeCbx.DataSource = allRecipes;
+        }
 
         private void AddRecipeBtn_Click(object sender, EventArgs e)
         {
@@ -44,6 +54,8 @@ namespace TeamSourceControlDemo
             GetRecipeId();
             EditDeleteForm form = new EditDeleteForm();
             form.Show();
+            //Updates Recipe List.
+            
         }
         private void showRecipeBtn_Click_1(object sender, EventArgs e)
         {
