@@ -32,9 +32,8 @@ namespace TeamSourceControlDemo
         /// </summary>
         public static void RefreshRecipeList()
         {
-            
             List<Recipe> allRecipes = RecipeDb.GetAllRecipes();
-            RecipeCbx.DataSource = allRecipes;
+            
         }
 
         private void AddRecipeBtn_Click(object sender, EventArgs e)
@@ -75,6 +74,12 @@ namespace TeamSourceControlDemo
             AllRecipesForm allRecipes = new AllRecipesForm();
             allRecipes.Show();
             
+        }
+
+        private void RefreshBtn_Click(object sender, EventArgs e)
+        {
+            List<Recipe> allRecipes = RecipeDb.GetAllRecipes();
+            PopulateRecipeList(allRecipes);
         }
     }
 }

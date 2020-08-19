@@ -36,6 +36,7 @@
             this.showRecipeBtn = new System.Windows.Forms.Button();
             this.mainPagelbl = new System.Windows.Forms.Label();
             this.showAllRecipiesButton = new System.Windows.Forms.Button();
+            this.RefreshBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RecipeCbx
@@ -114,11 +115,22 @@
             this.showAllRecipiesButton.UseVisualStyleBackColor = true;
             this.showAllRecipiesButton.Click += new System.EventHandler(this.showAllRecipiesButton_Click);
             // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.Location = new System.Drawing.Point(122, 185);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(75, 41);
+            this.RefreshBtn.TabIndex = 8;
+            this.RefreshBtn.Text = "Refresh Recipe List";
+            this.RefreshBtn.UseVisualStyleBackColor = true;
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
+            // 
             // RecipeMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 168);
+            this.ClientSize = new System.Drawing.Size(340, 238);
+            this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.showAllRecipiesButton);
             this.Controls.Add(this.mainPagelbl);
             this.Controls.Add(this.showRecipeBtn);
@@ -145,5 +157,6 @@
         private System.Windows.Forms.Button showRecipeBtn;
         private System.Windows.Forms.Label mainPagelbl;
         private System.Windows.Forms.Button showAllRecipiesButton;
+        private System.Windows.Forms.Button RefreshBtn;
     }
 }
