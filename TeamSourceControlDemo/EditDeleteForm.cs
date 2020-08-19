@@ -68,14 +68,26 @@ namespace TeamSourceControlDemo
 
             
         }
-
+        /// <summary>
+        /// When the user clicks this button, the recipe in the
+        /// database gets updated with the new information.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            CurrRecipeId = RecipeMain.currRecipeId;
-            Recipe currRecipe = RecipeDb.GetRecipe(CurrRecipeId);
-            RecipeDb.Update(currRecipe);
-            MessageBox.Show(currRecipe.Title + " was updated!");
-            PopulateCurrentRecipe(currRecipe);
+            Recipe tempRecipe = new Recipe();
+            tempRecipe.RecipeId = CurrRecipeId;
+            tempRecipe.Title = RecipeTitleTxt.Text;
+            tempRecipe.TotalTime = Convert.ToInt32(TotalTimeTxt.Text);
+            tempRecipe.PrepTime = Convert.ToInt32(TotalTimeTxt.Text);
+            tempRecipe.Servings = Convert.ToInt32(ServingsTxt.Text);
+            tempRecipe.Ingredients = IngredientsTxt.Text;
+            tempRecipe.Instructions = InstructionsTxt.Text;
+            RecipeDb.Update(tempRecipe);
+            RecipeMain.RefreshRecipeList();
+            MessageBox.Show(tempRecipe.Title + " was updated!");
+            
         }
     }
 }
