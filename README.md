@@ -11,8 +11,8 @@ Prereqs:
 with the toolbox
 
 This Application can:
-Add/Edit Food Recipies to the database
-Display Various Information about Food Recipies, like:
+Add/Edit Food Recipies to the database and
+display various information about Food Recipies, like:
 
 - Cooking Time
 - Instructions
