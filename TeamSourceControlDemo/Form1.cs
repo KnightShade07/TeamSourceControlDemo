@@ -60,5 +60,10 @@ namespace TeamSourceControlDemo
 
             func(Controls);
         }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

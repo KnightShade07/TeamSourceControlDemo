@@ -62,8 +62,6 @@ namespace TeamSourceControlDemo
             {
                 RecipeDb.Delete(currRecipe);
                 Close();
-                RecipeMain main = new RecipeMain();
-                main.Show();
             }
 
             
