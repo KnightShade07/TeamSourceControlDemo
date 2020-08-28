@@ -58,7 +58,7 @@
             // 
             // AddRecipeBtn
             // 
-            this.AddRecipeBtn.Location = new System.Drawing.Point(12, 107);
+            this.AddRecipeBtn.Location = new System.Drawing.Point(12, 121);
             this.AddRecipeBtn.Name = "AddRecipeBtn";
             this.AddRecipeBtn.Size = new System.Drawing.Size(100, 40);
             this.AddRecipeBtn.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // EditDeleteRecipeBtn
             // 
-            this.EditDeleteRecipeBtn.Location = new System.Drawing.Point(122, 107);
+            this.EditDeleteRecipeBtn.Location = new System.Drawing.Point(12, 167);
             this.EditDeleteRecipeBtn.Name = "EditDeleteRecipeBtn";
             this.EditDeleteRecipeBtn.Size = new System.Drawing.Size(100, 40);
             this.EditDeleteRecipeBtn.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // Exit
             // 
-            this.Exit.Location = new System.Drawing.Point(228, 107);
+            this.Exit.Location = new System.Drawing.Point(228, 167);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(100, 40);
             this.Exit.TabIndex = 4;
@@ -117,9 +117,9 @@
             // 
             // RefreshBtn
             // 
-            this.RefreshBtn.Location = new System.Drawing.Point(145, 153);
+            this.RefreshBtn.Location = new System.Drawing.Point(12, 78);
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(75, 54);
+            this.RefreshBtn.Size = new System.Drawing.Size(100, 23);
             this.RefreshBtn.TabIndex = 8;
             this.RefreshBtn.Text = "Refresh the List";
             this.RefreshBtn.UseVisualStyleBackColor = true;
