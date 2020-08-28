@@ -42,6 +42,7 @@
             this.ServingsTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.IngredientsTxt = new System.Windows.Forms.TextBox();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TotalTimeTxt
@@ -161,11 +162,22 @@
             this.IngredientsTxt.Size = new System.Drawing.Size(100, 154);
             this.IngredientsTxt.TabIndex = 12;
             // 
+            // exitBtn
+            // 
+            this.exitBtn.Location = new System.Drawing.Point(450, 278);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(100, 45);
+            this.exitBtn.TabIndex = 16;
+            this.exitBtn.Text = "Close";
+            this.exitBtn.UseVisualStyleBackColor = true;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 405);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.IngredientsTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ServingsTxt);
@@ -204,6 +216,7 @@
         private System.Windows.Forms.TextBox ServingsTxt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox IngredientsTxt;
+        private System.Windows.Forms.Button exitBtn;
     }
 }
 
