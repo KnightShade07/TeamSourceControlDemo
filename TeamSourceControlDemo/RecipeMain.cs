@@ -87,6 +87,10 @@ namespace TeamSourceControlDemo
         {
             List<Recipe> allRecipes = RecipeDb.GetAllRecipes();
             PopulateRecipeList(allRecipes);
+            MessageBox.Show("Recipe List has been refreshed!" + " Click the combo box to see your new recipes!" +
+                " If there were no new recipes added, then the list is already up to date, or you haven't made a new one yet!" +
+                " To do this, click the Add Recipe Button to fill out the form, then add it to the Recipe List by clicking the" +
+                " Add to Recipe Database Button!", "Recipe List Updated!");
         }
     }
 }
