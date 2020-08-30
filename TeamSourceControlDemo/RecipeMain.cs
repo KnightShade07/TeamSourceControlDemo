@@ -21,24 +21,41 @@ namespace TeamSourceControlDemo
             List<Recipe> allRecipes = RecipeDb.GetAllRecipes();
             PopulateRecipeList(allRecipes);
         }
+        /// <summary>
+        /// Populates the Combo Box with the
+        /// Recipe names from the RecipeDB.
+        /// </summary>
+        /// <param name="recipes">The list of recipes</param>
         private void PopulateRecipeList(List<Recipe> recipes)
         {
             RecipeCbx.DataSource = recipes;
             RecipeCbx.DisplayMember = nameof(Recipe.Title);
         }
         
-
+        /// <summary>
+        /// When the Add Recipe Button is clicked, it will
+        /// display the AddRecipe Form.
+        /// </summary>
+        
         private void AddRecipeBtn_Click(object sender, EventArgs e)
         {
             Form1 addForm = new Form1();
             addForm.Show();
         }
+        /// <summary>
+        /// Closes the form when clicked.
+        /// </summary>
+        
 
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Shows the Edit/Delete Form when a user
+        /// clicks the Edit/Delete Recipe Button.
+        /// </summary>
+        
         private void EditDeleteRecipeBtn_Click(object sender, EventArgs e)
         {
             // gets item selected in the combo box
@@ -54,7 +71,9 @@ namespace TeamSourceControlDemo
             ShowRecipeForm newForm = new ShowRecipeForm();
             newForm.Show();
         }
-        // gets the id from the selected item in the combo box 
+        /// <summary>
+        /// Gets the current recipeId
+        /// </summary>
         private void GetRecipeId()
         {
             Recipe currRecipe = RecipeCbx.SelectedItem as Recipe;
@@ -67,7 +86,10 @@ namespace TeamSourceControlDemo
             allRecipes.Show();
             
         }
-
+        /// <summary>
+        /// Refreshes the recipe combo box after the recipe has been added/deleted.
+        /// </summary>
+        
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             List<Recipe> allRecipes = RecipeDb.GetAllRecipes();
