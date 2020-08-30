@@ -79,13 +79,6 @@ namespace TeamSourceControlDemo
             Recipe currRecipe = RecipeCbx.SelectedItem as Recipe;
             currRecipeId = currRecipe.RecipeId;
         }
-
-        private void showAllRecipiesButton_Click(object sender, EventArgs e)
-        {
-            AllRecipesForm allRecipes = new AllRecipesForm();
-            allRecipes.Show();
-            
-        }
         /// <summary>
         /// Refreshes the recipe combo box after the recipe has been added/deleted.
         /// </summary>
