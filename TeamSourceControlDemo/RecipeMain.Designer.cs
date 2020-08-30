@@ -35,7 +35,6 @@
             this.Exit = new System.Windows.Forms.Button();
             this.showRecipeBtn = new System.Windows.Forms.Button();
             this.mainPagelbl = new System.Windows.Forms.Label();
-            this.showAllRecipiesButton = new System.Windows.Forms.Button();
             this.RefreshBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -105,16 +104,6 @@
             this.mainPagelbl.TabIndex = 6;
             this.mainPagelbl.Text = "Main Page";
             // 
-            // showAllRecipiesButton
-            // 
-            this.showAllRecipiesButton.Location = new System.Drawing.Point(203, 78);
-            this.showAllRecipiesButton.Name = "showAllRecipiesButton";
-            this.showAllRecipiesButton.Size = new System.Drawing.Size(125, 23);
-            this.showAllRecipiesButton.TabIndex = 7;
-            this.showAllRecipiesButton.Text = "Show All Recipies";
-            this.showAllRecipiesButton.UseVisualStyleBackColor = true;
-            this.showAllRecipiesButton.Click += new System.EventHandler(this.showAllRecipiesButton_Click);
-            // 
             // RefreshBtn
             // 
             this.RefreshBtn.Location = new System.Drawing.Point(12, 78);
@@ -131,7 +120,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 219);
             this.Controls.Add(this.RefreshBtn);
-            this.Controls.Add(this.showAllRecipiesButton);
             this.Controls.Add(this.mainPagelbl);
             this.Controls.Add(this.showRecipeBtn);
             this.Controls.Add(this.Exit);
@@ -156,7 +144,6 @@
         private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.Button showRecipeBtn;
         private System.Windows.Forms.Label mainPagelbl;
-        private System.Windows.Forms.Button showAllRecipiesButton;
         private System.Windows.Forms.Button RefreshBtn;
     }
 }
